@@ -8,14 +8,14 @@ const dotenv = require('dotenv')
 dotenv.config()
 var app = express()
 app.post('/',function (req, res) {
-
     if (req.headers['acces-token'] === process.env.HOME_API_PC_ON_TOKEN) {
+        console.log("GOT!");
         wol.wake(process.env.PC_MAC, { address:process.env.BROADCAST_IP});
         res.json({
             data: 'Starting STEPSKOP-PC'
         })
     } else {
-        res.status(400).send('Unauthenticated')
+        res.status(400).json({data:'Unauthenticated'})
     }
 })
 
