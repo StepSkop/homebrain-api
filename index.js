@@ -4,8 +4,8 @@
 
 const express = require('express')
 const wol = require('wake_on_lan')
-const dotenv = require('dotenv')
-dotenv.config()
+// const dotenv = require('dotenv')
+// dotenv.config()
 var app = express()
 console.log(process.env.HOME_API_PC_ON_TOKEN);
 app.post('/',function (req, res) {
