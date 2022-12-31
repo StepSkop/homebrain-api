@@ -19,4 +19,4 @@ app.post('/',function (req, res) {
     }
 })
 
-app.listen(6655)
+app.listen(6655, console.log('Listening on port 6655'))
