@@ -7,6 +7,7 @@ const wol = require('wake_on_lan')
 const dotenv = require('dotenv')
 dotenv.config()
 var app = express()
+console.log(process.env.HOME_API_PC_ON_TOKEN);
 app.post('/',function (req, res) {
     if (req.headers['acces-token'] === process.env.HOME_API_PC_ON_TOKEN) {
         console.log("GOT!");
